@@ -12,12 +12,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.contractors.restapi.dal.entity.Car;
 import com.contractors.restapi.dal.repository.AccountRepository;
 import com.contractors.restapi.dal.repository.CarRepository;
 import com.contractors.restapi.util.UserNotFoundException;
 
+@CrossOrigin(allowedHeaders = {"*"})
 @RestController
 @RequestMapping("/{userId}/cars")
 public class CarController {
